@@ -2,6 +2,7 @@ package com.carlosjr.brewery.web.controller;
 
 import com.carlosjr.brewery.services.CustomerService;
 import com.carlosjr.brewery.web.model.CustomerDto;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,6 @@ import java.util.UUID;
 @RestController
 @RequestMapping(value = "/api/v1/customer")
 public class CustomerController {
-
     private final CustomerService customerService;
 
     public CustomerController(CustomerService customerService) {
