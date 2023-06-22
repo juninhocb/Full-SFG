@@ -1,0 +1,11 @@
+com\carlosjr\sfgbeerservice\repositories\BeerRepository.class
+com\carlosjr\sfgbeerservice\web\model\BeerStyleEnum.class
+com\carlosjr\sfgbeerservice\SfgBeerServiceApplication.class
+com\carlosjr\sfgbeerservice\web\controller\BeerController.class
+com\carlosjr\sfgbeerservice\bootstrap\BeerLoader.class
+com\carlosjr\sfgbeerservice\web\controller\MvcHandlerException.class
+com\carlosjr\sfgbeerservice\web\model\BeerDto$BeerDtoBuilder.class
+com\carlosjr\sfgbeerservice\domain\Beer$BeerBuilder.class
+com\carlosjr\sfgbeerservice\domain\Beer.class
+com\carlosjr\sfgbeerservice\services\BeerService.class
+com\carlosjr\sfgbeerservice\web\model\BeerDto.class
