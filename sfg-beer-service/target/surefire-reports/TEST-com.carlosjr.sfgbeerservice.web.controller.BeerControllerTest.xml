@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.carlosjr.sfgbeerservice.SfgBeerServiceApplicationTests" time="10.803" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest" time="2.136" tests="3" errors="1" skipped="0" failures="1">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,5 +63,75 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="contextLoads" classname="com.carlosjr.sfgbeerservice.SfgBeerServiceApplicationTests" time="0.21"/>
+  <testcase name="updateBeerById" classname="com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest" time="0.362">
+    <failure message="Status expected:&lt;204&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<204> but was:<404>
+	at com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest.updateBeerById(BeerControllerTest.java:100)
+]]></failure>
+    <system-out><![CDATA[2023-06-22 11:12:57.635  INFO 260 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest], using SpringBootContextLoader
+2023-06-22 11:12:57.638  INFO 260 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-06-22 11:12:57.638  INFO 260 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest]: BeerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-22 11:12:57.707  INFO 260 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.carlosjr.sfgbeerservice.SfgBeerServiceApplication for test class com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest
+2023-06-22 11:12:57.710  INFO 260 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-06-22 11:12:57.722  INFO 260 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1e487d57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4b2af0eb, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@66c32e15, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6d387e9b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@304704ae, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c7607e5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@533a27f8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7dd847a2, org.springframework.test.context.event.EventPublishingTestExecutionListener@75b25ec3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@69e736bf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6b60d99c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@543a7605, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@33997e07, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@639bf405, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@eda7dd3]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.12)
+
+2023-06-22 11:12:57.802  INFO 260 --- [           main] c.c.s.web.controller.BeerControllerTest  : Starting BeerControllerTest using Java 11.0.9.1 on pcdes02 with PID 260 (started by leonardo in C:\Users\leonardo.LOCAL\Desktop\workspace\micro course\sfg-beer-service)
+2023-06-22 11:12:57.803  INFO 260 --- [           main] c.c.s.web.controller.BeerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-06-22 11:12:58.917  INFO 260 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-06-22 11:12:58.917  INFO 260 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-06-22 11:12:58.918  INFO 260 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-06-22 11:12:58.942  INFO 260 --- [           main] c.c.s.web.controller.BeerControllerTest  : Started BeerControllerTest in 1.214 seconds (JVM running for 13.167)
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/beer-new0cad473b-5e77-49d3-8181-e0166ce598df
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"163"]
+             Body = {"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"Nice Ale","beerStyle":"ALE","upc":123123123123,"price":9.99,"quantityOnHand":null}
+    Session Attrs = {}
+
+Handler:
+             Type = org.springframework.web.servlet.resource.ResourceHttpRequestHandler
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="saveNewBeer" classname="com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest" time="0.305">
+    <error message="Request processing failed; nested exception is java.lang.NullPointerException" type="org.springframework.web.util.NestedServletException">org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest.saveNewBeer(BeerControllerTest.java:74)
+Caused by: java.lang.NullPointerException
+	at com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest.saveNewBeer(BeerControllerTest.java:74)
+</error>
+  </testcase>
+  <testcase name="getBeerById" classname="com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest" time="0.23"/>
 </testsuite>

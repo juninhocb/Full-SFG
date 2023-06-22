@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 2.136 s <<< FAILURE! - in com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest
+updateBeerById  Time elapsed: 0.362 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<404>
+	at com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest.updateBeerById(BeerControllerTest.java:100)
+
+saveNewBeer  Time elapsed: 0.305 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest.saveNewBeer(BeerControllerTest.java:74)
+Caused by: java.lang.NullPointerException
+	at com.carlosjr.sfgbeerservice.web.controller.BeerControllerTest.saveNewBeer(BeerControllerTest.java:74)
+
