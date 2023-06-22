@@ -1,6 +1,7 @@
 package com.carlosjr.sfgbeerservice.bootstrap;
 
 import com.carlosjr.sfgbeerservice.repositories.BeerRepository;
+import com.carlosjr.sfgbeerservice.web.model.BeerStyleEnum;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import com.carlosjr.sfgbeerservice.domain.Beer;
@@ -26,7 +27,7 @@ public class BeerLoader implements CommandLineRunner {
             beerRepository.save(Beer
                     .builder()
                     .beerName("Kayser")
-                    .beerStyle("Pilsen")
+                    .beerStyle(BeerStyleEnum.PILSEN)
                     .quantityToBrew(200)
                     .minOnHand(12)
                     .upc(28374794827L)
@@ -35,7 +36,7 @@ public class BeerLoader implements CommandLineRunner {
             beerRepository.save(Beer
                     .builder()
                     .beerName("Heineken")
-                    .beerStyle("Longneck")
+                    .beerStyle(BeerStyleEnum.GOSE)
                     .quantityToBrew(200)
                     .minOnHand(12)
                     .upc(283747912423L)
@@ -44,14 +45,13 @@ public class BeerLoader implements CommandLineRunner {
             beerRepository.save(Beer
                     .builder()
                     .beerName("Brahma")
-                    .beerStyle("Pilsen")
+                    .beerStyle(BeerStyleEnum.IPA)
                     .quantityToBrew(200)
                     .minOnHand(12)
                     .upc(28374794111L)
                     .price(new BigDecimal("5.40"))
                     .build());
         }
-
         System.out.println("Loaded beers: " + beerRepository.count());
     }
 }

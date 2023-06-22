@@ -1,8 +1,10 @@
 package com.carlosjr.sfgbeerservice.domain;
 
+import com.carlosjr.sfgbeerservice.web.model.BeerStyleEnum;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -21,7 +23,8 @@ public class Beer {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(length = 36, updatable = false, nullable = false)
+    @Column(columnDefinition = "VARCHAR(36)", updatable = false, nullable = false)
+    @Type(type="uuid-char")
     private UUID id;
     @Version
     private Long version;
@@ -33,8 +36,9 @@ public class Beer {
     private Timestamp lastModifiedDate;
     @Column(name = "beer_name")
     private String beerName;
+    @Enumerated(EnumType.STRING)
     @Column(name = "beer_style")
-    private String beerStyle;
+    private BeerStyleEnum beerStyle;
     @Column(unique = true)
     private Long upc;
     private BigDecimal price;
