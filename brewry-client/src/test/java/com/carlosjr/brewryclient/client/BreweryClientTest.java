@@ -1,6 +1,6 @@
 package com.carlosjr.brewryclient.client;
 
-import com.carlosjr.brewryclient.model.BeerDto;
+import com.carlosjr.brewryclient.model.Beer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,25 +17,25 @@ class BreweryClientTest {
     private BreweryClient client;
     @Test
     void getBeerById() {
-        BeerDto dto = client.getBeerById(UUID.randomUUID());
+        Beer dto = client.getBeerById(UUID.randomUUID());
         assertNotNull(dto);
     }
     @Test
     void saveNewBeer() {
-        BeerDto beerDto = BeerDto
+        Beer beer = Beer
                 .builder()
                 .name("New beer")
                 .build();
-        URI uri = client.saveNewBeer(beerDto);
+        URI uri = client.saveNewBeer(beer);
         assertNotNull(uri);
     }
     @Test
     void updateBeer() {
-        BeerDto beerDto = BeerDto
+        Beer beer = Beer
                 .builder()
                 .name("New beer")
                 .build();
-        client.updateBeer(UUID.randomUUID(), beerDto);
+        client.updateBeer(UUID.randomUUID(), beer);
     }
 
     @Test
