@@ -128,4 +128,10 @@ public class BeerServiceImpl implements BeerService {
 
         return beerDto;
     }
+    @Override
+    public List<Beer> getAll() {
+        List<Beer> beers = beerRepository.findAll();
+        System.out.println("Beer quantity: " + beers.size());
+        return beers;
+    }
 }

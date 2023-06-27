@@ -72,5 +72,4 @@ public class BeerController {
 
         return new ResponseEntity<>(beerDto, HttpStatus.OK);
     }
-
 }
