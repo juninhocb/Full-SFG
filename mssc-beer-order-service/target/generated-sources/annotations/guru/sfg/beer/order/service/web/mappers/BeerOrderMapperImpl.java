@@ -4,11 +4,13 @@ import guru.sfg.beer.order.service.domain.BeerOrder;
 import guru.sfg.beer.order.service.domain.BeerOrderLine;
 import guru.sfg.beer.order.service.domain.BeerOrderStatusEnum;
 import guru.sfg.beer.order.service.domain.Customer;
-import guru.sfg.brewery.model.BeerOrderDto;
+
 import java.sql.Timestamp;
 import java.util.Set;
 import java.util.UUID;
 import javax.annotation.processing.Generated;
+
+import guru.sfg.brewery.model.BeerOrderDto;
 import org.springframework.stereotype.Component;
 
 @Generated(

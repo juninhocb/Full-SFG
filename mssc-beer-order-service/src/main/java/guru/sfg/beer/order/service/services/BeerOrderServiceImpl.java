@@ -19,8 +19,8 @@ package guru.sfg.beer.order.service.services;
 
 import guru.sfg.beer.order.service.domain.BeerOrder;
 import guru.sfg.beer.order.service.domain.BeerOrderLine;
-import guru.sfg.beer.order.service.domain.Customer;
 import guru.sfg.beer.order.service.domain.BeerOrderStatusEnum;
+import guru.sfg.beer.order.service.domain.Customer;
 import guru.sfg.beer.order.service.repositories.BeerOrderRepository;
 import guru.sfg.beer.order.service.repositories.CustomerRepository;
 import guru.sfg.beer.order.service.web.mappers.BeerOrderMapper;
@@ -35,7 +35,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Slf4j

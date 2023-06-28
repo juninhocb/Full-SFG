@@ -2,12 +2,14 @@ package guru.sfg.beer.order.service.web.mappers;
 
 import guru.sfg.beer.order.service.domain.BeerOrder;
 import guru.sfg.beer.order.service.domain.BeerOrderLine;
+import guru.sfg.brewery.model.BeerOrderDto;
 import guru.sfg.brewery.model.BeerOrderLineDto;
-import java.sql.Timestamp;
-import java.util.UUID;
-import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.processing.Generated;
+import java.sql.Timestamp;
+import java.util.UUID;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
