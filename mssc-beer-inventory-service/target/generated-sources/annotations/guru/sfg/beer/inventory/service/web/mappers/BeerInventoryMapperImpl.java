@@ -1,7 +1,7 @@
 package guru.sfg.beer.inventory.service.web.mappers;
 
 import guru.sfg.beer.inventory.service.domain.BeerInventory;
-import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
+import guru.sfg.brewery.model.BeerInventoryDto;
 import java.sql.Timestamp;
 import java.util.UUID;
 import javax.annotation.processing.Generated;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-27T14:17:25-0300",
+    date = "2023-06-28T13:44:58-0300",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.9.1 (AdoptOpenJDK)"
 )
 @Component
