@@ -25,11 +25,11 @@ public class ValidateOrderAction implements Action<BeerOrderStatusEnum, BeerOrde
 
     private final BeerOrderRepository beerOrderRepository;
     private final JmsTemplate jmsTemplate;
-    private BeerMapper beerMapper;
+    private final BeerMapper beerMapper;
 
     @Override
     public void execute(StateContext<BeerOrderStatusEnum, BeerOrderEventEnum> stateContext) {
-        String beerOrderId = (String) stateContext.getMessage().getHeaders().get(BeerOrderManagerImpl.BEER_ORDER_ID_HEADER);
+        String beerOrderId = (String) stateContext.getMessage().getHeaders().get(BeerOrderManagerImpl.ORDER_ID_HEADER);
         log.info("Try to validate an order with ID: " + beerOrderId);
         BeerOrder beerOrder = beerOrderRepository.findOneById(UUID.fromString(beerOrderId));
         jmsTemplate.convertAndSend(JmsConfig.VALIDATE_ORDER_QUEUE, ValidateOrderRequest.builder().beerOrder(beerMapper.beerOrderToDto(beerOrder)).build());
@@ -45,7 +45,7 @@ public class ValidateOrderAction implements Action<BeerOrderStatusEnum, BeerOrde
     private void sendMessageToMachine(StateContext stateContext, BeerOrderEventEnum payload){
         stateContext.getStateMachine().sendEvent(MessageBuilder
                 .withPayload(payload)
-                .setHeader(BeerOrderManagerImpl.BEER_ORDER_ID_HEADER, stateContext.getMessageHeader(BeerOrderManagerImpl.BEER_ORDER_ID_HEADER))
+                .setHeader(BeerOrderManagerImpl.ORDER_ID_HEADER, stateContext.getMessageHeader(BeerOrderManagerImpl.ORDER_ID_HEADER))
                 .build());
 
     }

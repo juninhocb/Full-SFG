@@ -2,18 +2,16 @@ package guru.sfg.beer.order.service.web.mappers;
 
 import guru.sfg.beer.order.service.domain.BeerOrder;
 import guru.sfg.beer.order.service.domain.BeerOrderLine;
-import guru.sfg.brewery.model.BeerOrderDto;
 import guru.sfg.brewery.model.BeerOrderLineDto;
+import java.sql.Timestamp;
+import java.util.UUID;
+import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.processing.Generated;
-import java.sql.Timestamp;
-import java.util.UUID;
-
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-28T13:50:43-0300",
+    date = "2023-06-29T10:08:08-0300",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.9.1 (AdoptOpenJDK)"
 )
 @Component
